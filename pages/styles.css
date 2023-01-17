@@ -78,6 +78,20 @@ body {
     width: min-content;
 }
 
+.prompt-line-elements {
+    display: flex;
+    place-content: flex-start center;
+    align-items: center;
+    flex: 0 0 auto;
+    flex-flow: row nowrap;
+    gap: 12px;
+    height: min-content;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+
 .prompt-box {
     border-bottom-width: 1px;
     border-color: rgba(255, 255, 255, 0.1);
@@ -111,6 +125,42 @@ body {
     color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     text-transform: none;
+}
+
+.prompt-line {
+    border-bottom-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 1px;
+    place-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    display: inline-block;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    gap: 10px;
+    height: 30px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    width: calc(43% - 5px);
+    max-width: 1200px;
+    will-change: transform;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 1.6em;
+    text-align: start;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    text-transform: none;
+
 }
 
 textarea {
