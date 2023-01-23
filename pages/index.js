@@ -5,12 +5,12 @@ import { useState } from "react";
 
 const Home = () => {
   const [userInput, setUserInput] = useState("");
-  const [userCompany1, setUserCompany1] = useState("Apple");
-  const [userCompany2, setUserCompany2] = useState("Lazada");
+  const [userCompany1, setUserCompany1] = useState("");
+  const [userCompany2, setUserCompany2] = useState("");
   const [userTargetMarkets, setUserTargetMarkets] = useState("Singapore, Malaysia, Hong Kong, Thailand");
   const [userAudience, setUserAudience] = useState("Students and young professionals aged 18-35");
   const [userTimeline, setUserTimeline] = useState("June 2023 - March 2024");
-  const [userGoal, setUserGoal] = useState("Expand business into South East Asia");
+  const [userGoal, setUserGoal] = useState("");
   const [apiOutput, setApiOutput] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -22,6 +22,27 @@ const Home = () => {
   const onCompany2ChangedText = (event) => {
     console.log(event.target.value);
     setUserCompany2(event.target.value);
+  };
+
+
+  const onTargetMarketsChangedText = (event) => {
+    console.log(event.target.value);
+    setUserTargetMarkets(event.target.value);
+  };
+
+  const onAudienceChangedText = (event) => {
+    console.log(event.target.value);
+    setUserAudience(event.target.value);
+  };
+
+  const onTimelineChangedText = (event) => {
+    console.log(event.target.value);
+    setUserTimeline(event.target.value);
+  };
+
+  const onGoalChangedText = (event) => {
+    console.log(event.target.value);
+    setUserGoal(event.target.value);
   };
 
   const onUserChangedText = (event) => {
@@ -66,7 +87,7 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>GPT-3 Writer | Patonar</title>
       </Head>
       <div className="container">
         <div className="header">
@@ -96,8 +117,8 @@ const Home = () => {
           <textarea
             className="prompt-box"
             placeholder="start typing here"
-            value={userInput}
-            onChange={onUserChangedText}
+            value={userGoal}
+            onChange={onGoalChangedText}
           />
           <div className="prompt-buttons">
             <a className={isGenerating ? 'generate-button loading' : 'generate-button'}
